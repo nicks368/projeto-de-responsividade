@@ -11,6 +11,7 @@
 }
 
 body {
+  height: 100vh;
   font-family: "Source Sans Pro";
   text-rendering: optimizeLegibility;
 }
@@ -52,7 +53,7 @@ header nav ul li a { /* nav > ul > li > a*/
 }
 
 header nav ul li a:hover {
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255,255,255, 0.15)
 }
 
@@ -60,7 +61,7 @@ h2 {
   color: rgb(75, 75, 75);
   font-size: 36px;
   line-height: 45px;
-  text-align: center;
+  text-align: left;
 }
 
 /* SESSÃO */
@@ -85,30 +86,35 @@ section.texto-intro p {
 }
 
 .imagem-intro {
+  width: 1200px;
   display: flex;
-  margin: 40px;
-}
-
-.imagem {
   margin: auto;
 }
+
+/*.imagem-intro .imagem {
+  display: flex;
+  margin: auto;
+}*/
 
 .img-intro {
-  margin: auto;
   transition-property: all;
   transition-duration: 0.5s;
 }
 
-.imagem:hover .img-intro{
+.imagem-intro .img-intro:hover{
   filter: brightness(50%);
   transform: scale(0.98); 
+  
 }
 
 span[data-desc] {
+  margin: auto;
   transition-property: all;
   transition-timing-function: ease-in;
   transition-duration: 0.5s;
+  
 }
+
 
 span[data-desc]:hover::after {
   position: absolute;
@@ -116,9 +122,22 @@ span[data-desc]:hover::after {
   color: #d4d4d4;
   text-transform: lowercase;
   font-size: 50px;
-  top: 75%;
+  top: 76.5%;
   left: 43.5%;
+  pointer-events: none;
 }
+
+.imagem-intro .container {
+  width: 1200px;
+  display: inline;
+  text-align: justify;
+
+  margin: auto;
+  
+}
+
+
+
 /*==CARDS==*/
 
 main {
